@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8f5ef;
+  --foreground: #1b1a18;
+  --card: #ffffff;
+  --card-foreground: #1b1a18;
+  --popover: #ffffff;
+  --popover-foreground: #1b1a18;
+  --primary: #0f7b5c;
+  --primary-foreground: #f7fbf9;
+  --secondary: #efe7dc;
+  --secondary-foreground: #1b1a18;
+  --muted: #f1ebe2;
+  --muted-foreground: #6b6258;
+  --accent: #f0b35d;
+  --accent-foreground: #2a1808;
+  --destructive: #c64545;
+  --destructive-foreground: #fff7f7;
+  --border: #e5dccd;
+  --ring: #0f7b5c;
+}
+
+.dark {
+  --background: #121312;
+  --foreground: #f2ede5;
+  --card: #161816;
+  --card-foreground: #f2ede5;
+  --popover: #161816;
+  --popover-foreground: #f2ede5;
+  --primary: #39c48a;
+  --primary-foreground: #07170f;
+  --secondary: #1d1f1c;
+  --secondary-foreground: #f2ede5;
+  --muted: #1a1c19;
+  --muted-foreground: #a59f93;
+  --accent: #f1a84b;
+  --accent-foreground: #2c1a07;
+  --destructive: #e05d5d;
+  --destructive-foreground: #fff1f1;
+  --border: #2a2d29;
+  --ring: #39c48a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-sora);
+  --font-mono: var(--font-ibm);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(circle at top, rgba(240, 179, 93, 0.15), transparent 45%),
+    radial-gradient(circle at 20% 20%, rgba(15, 123, 92, 0.12), transparent 40%),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+.dark body {
+  background: radial-gradient(circle at top, rgba(57, 196, 138, 0.12), transparent 45%),
+    radial-gradient(circle at 20% 20%, rgba(241, 168, 75, 0.12), transparent 40%),
+    var(--background);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(107, 98, 88, 0.4);
+  border-radius: 999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(165, 159, 147, 0.35);
+}
