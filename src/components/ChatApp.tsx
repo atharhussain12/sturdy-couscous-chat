@@ -202,6 +202,7 @@ export default function ChatApp() {
           setChatKeyInput(decodedText);
           setScanOpen(false);
         },
+        () => undefined,
       );
     })();
     return () => {
